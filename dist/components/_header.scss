@@ -1,0 +1,101 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background: $clr-light;
+    &_wrapper {
+        @include centerAll();
+    }
+    .branding {
+        h3 {
+            display: none;
+        }
+    }
+    &_nav {
+        background: $clr-dark;
+        position: absolute;
+        right: -100rem;
+        height: calc(100vh - 103px);
+        top: 10rem;
+        width: 100%;
+        transition: 0.5s ease;
+        &.open {
+            right: 0;
+        }
+        ul {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding-top: 10rem;
+            li {
+                a {
+                    color: $clr-light;
+                    font-size: 2rem;
+                }
+                &:hover {
+                    a {
+                        color: $clr-primary;
+                    }
+                }
+            }
+        }
+    }
+    .burgir {
+        span {
+            width: 2.5rem;
+            height: 0.3rem;
+            background-color: $clr-dark;
+            display: block;
+            border-radius: 5rem;
+            transition: 0.5s ease;
+            &:nth-child(2) {
+                margin: 0.5rem 0;
+            }
+        }
+        &.open {
+            span {
+                &:first-child {
+                    transform: translate(0, 8px) rotate(225deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: translate(0, -8px) rotate(-225deg);
+                }
+            }
+        }
+    }
+    @include mediaQuery($break-md) {
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .branding {
+            @include centerAll;
+            width: 100% ;
+            h3 {
+                display: unset;
+            } 
+        }
+        &_nav {
+            position: unset;
+            height: fit-content;
+            background: $clr-light;
+            ul {
+                padding-top: 0;
+                flex-direction: row;
+                justify-content: center;
+                li {
+                    a {
+                        color: $clr-dark;
+                    }
+                }
+            }
+        }
+        .burgir {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border-radius: 5rem;
+    border: 1px solid transparent;
+    font-size: 2rem;
+    transition: .5s ease;
+    text-align: center;
+    &.bg--primary {
+        background: $clr-primary;
+        color: $clr-light;
+    }
+    &:hover {
+        scale: 1.1;
+    }
+}

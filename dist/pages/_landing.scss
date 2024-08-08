@@ -1,0 +1,66 @@
+.banner {
+    padding-top: 10rem;
+
+    .container {
+        background-image: url("../img/banner.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: center;
+    }
+    &_text {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 3rem;
+        margin-left: 5rem;
+        a {
+            width: 15rem;
+        }
+    }
+    @include mediaQuery($break-md) {
+        padding-top: 18rem;
+    }
+}
+
+.menu {
+    &_tabs {
+        ul {
+            display: flex;
+            gap: 8rem;
+            justify-content: center;
+            .tab_nav_link {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+                &:hover {
+                    cursor: pointer;
+                    span {
+                        color: $clr-primary;
+                    }
+                }
+                img {
+                    width: 5rem;
+                    margin: 0 auto;
+                }
+                &.active {
+                    span {
+                        color: $clr-primary;
+                    }
+                }
+            }
+        }
+    }
+    &_content {
+        &_item {
+            display: none;
+           
+            &.active {
+                display: unset;
+            }
+        }
+    }
+}
