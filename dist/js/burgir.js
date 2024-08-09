@@ -14,11 +14,10 @@ menuNav.forEach((menu) => {
         removeActiveMenu();
         menu.classList.add('active');
         
-        const activeContent = document.querySelector(`#${menu.id}-content`);
+        const activeContent = document.querySelectorAll(`#${menu.id}-content`);
         removeActiveContent();
-        activeContent.classList.add('active');
+        activeContent.forEach((content) => {content.classList.add('active')});
     });
-    removeActiveMenu();
 });
 
 function removeActiveMenu() {

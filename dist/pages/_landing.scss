@@ -55,11 +55,78 @@
         }
     }
     &_content {
+        margin-top: 5rem;
+        @include gridEven();
+        grid-gap: 3rem;
         &_item {
+            border: 1px solid rgba($color: #000000, $alpha: 0.1);
+            padding: 6rem 4rem;
+            position: relative;
             display: none;
-           
+            transition: .5s ease-in-out;
+            img {
+                transition: .25s ease-in-out;
+                scale: .8;
+            }
+            .menu_item_text {
+                transition: 0.25s ease-in-out;
+                h4 {
+                    font-size: 2.5rem;
+                }
+                h3 {
+                    margin: 0.5rem 0;
+                    font-size: 3rem;
+                    font-weight: 400;
+                    color: $clr-primary;
+                }
+                p {
+                    margin: 2rem 0;
+                }
+                a {
+                    padding: 1rem 4rem;
+                    letter-spacing: 0.5rem;
+                    i {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+                    &:hover {
+                        scale: 1;
+                        background-color: $clr-dark;
+                        color: $clr-primary;
+                    }
+                }
+            }
             &.active {
                 display: unset;
+            }
+        }
+    }
+    @include mediaQuery($break-md) {
+        &_content {
+            grid-template-columns: 1fr 1fr 1fr;
+            &_item {
+                overflow: hidden;
+                height: 54rem;
+                .menu_item_text {
+                    position: absolute;
+                    transition: .25s ease-in-out;
+                    p, a {
+                        opacity: 0;
+                        transition: .25s ease-in-out;
+                    }
+                }
+                &:hover {
+                    img {
+                        opacity: 40%;
+                    }
+                    .menu_item_text {
+                        transform: translateY(-8rem);
+                        transition: .25s ease-in-out;
+                        p, a {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
     }
