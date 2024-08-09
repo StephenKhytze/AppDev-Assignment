@@ -29,7 +29,7 @@ menuNav.forEach((menu, index) => {
         });
             menuTabs.style.transform = "translateX(0)"
             menuTabs.style.opacity = 1;
-        }, 150);
+        }, 250);
         if (innerWidth <= 460) {
             tabIndicator.style.left = `calc(calc(33% * ${index}) + 4.35rem)`;
         } else if (innerWidth <= 1920) {
