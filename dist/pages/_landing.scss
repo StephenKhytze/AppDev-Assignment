@@ -68,6 +68,7 @@
         margin-top: 5rem;
         @include gridEven();
         grid-gap: 3rem;
+        transition: .15s ease;
         &_item {
             border: 1px solid rgba($color: #000000, $alpha: 0.1);
             padding: 6rem 4rem;
