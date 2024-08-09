@@ -84,6 +84,18 @@ body {
   }
 }
 
+.menu_tabs {
+  position: relative;
+}
+.menu_tabs_indicator {
+  position: absolute;
+  width: 5.5rem;
+  height: 0.3rem;
+  background-color: #ffc139;
+  bottom: -1rem;
+  left: 4.35rem;
+  transition: 0.15s ease-in-out;
+}
 .menu_tabs ul {
   display: flex;
   gap: 8rem;
@@ -158,6 +170,9 @@ body {
   display: unset;
 }
 @media screen and (min-width: 760px) {
+  .menu_tabs_indicator {
+    left: 42.5rem;
+  }
   .menu_content {
     grid-template-columns: 1fr 1fr 1fr;
   }

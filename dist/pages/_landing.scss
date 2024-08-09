@@ -27,6 +27,16 @@
 
 .menu {
     &_tabs {
+        position: relative;
+        &_indicator {
+            position: absolute;
+            width: 5.5rem;
+            height: 0.3rem;
+            background-color: $clr-primary;
+            bottom: -1rem;
+            left: 4.35rem;
+            transition: .15s ease-in-out;
+        }
         ul {
             display: flex;
             gap: 8rem;
@@ -102,6 +112,11 @@
         }
     }
     @include mediaQuery($break-md) {
+        &_tabs {
+            &_indicator {
+                left: 42.5rem;
+            }
+        }
         &_content {
             grid-template-columns: 1fr 1fr 1fr;
             &_item {
