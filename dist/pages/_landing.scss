@@ -25,6 +25,62 @@
     }
 }
 
+.intro {
+    margin-top: 20px;
+    &_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .content_item{
+            img {
+                width: 40rem;
+                
+            }
+        }
+        .content_item_text {
+            margin: 15px 0;
+            .price_num {
+                font-size: 4rem;
+            }
+            p {
+                color: gray;
+                
+            }
+            a {
+                margin-top: 15px;
+                &:hover {
+                    scale: 1;
+                }
+            }
+
+            h4 {
+                font-size: 4rem;
+                &:first-child{
+                    font-weight: 300;
+                    font-size: 3rem;
+                }
+            }
+            span {
+                color: $clr-primary;
+                font-weight: 400;
+            }
+        }
+    }
+    @include mediaQuery($break-md) {
+        &_content {
+            .content_item_text {
+                a {
+                    &:hover {
+                        scale: 1;
+                        background-color: $clr-dark;
+                        color: $clr-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .menu {
     &_tabs {
         position: relative;
@@ -78,6 +134,9 @@
             img {
                 transition: .25s ease-in-out;
                 scale: .8;
+                &:hover{
+                    cursor: pointer;
+                }
             }
             .menu_item_text {
                 transition: 0.25s ease-in-out;
@@ -102,8 +161,6 @@
                     }
                     &:hover {
                         scale: 1;
-                        background-color: $clr-dark;
-                        color: $clr-primary;
                     }
                 }
             }
@@ -129,6 +186,13 @@
                     p, a {
                         opacity: 0;
                         transition: .25s ease-in-out;
+                    }
+                    a {
+                        &:hover {
+                            scale: 1;
+                            background-color: $clr-dark;
+                            color: $clr-primary;
+                        }  
                     }
                 }
                 &:hover {
