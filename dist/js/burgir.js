@@ -32,7 +32,7 @@ menuNav.forEach((menu, index) => {
         }, 250);
         if (innerWidth <= 460) {
             tabIndicator.style.left = `calc(calc(33% * ${index}) + 4.35rem)`;
-        } else if (innerWidth <= 1920) {
+        } else if (innerWidth <= 2160) {
             tabIndicator.style.left = `calc(calc(11.33% * ${index}) + 42.75rem)`;
         }
     });
