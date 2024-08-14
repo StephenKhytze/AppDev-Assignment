@@ -19,6 +19,22 @@
         width: 50px;
         height: 50px;
     }
+    &.special{
+        background: $clr-dark;
+        color: $clr-light;
+        border-radius: 30px;
+        width: 31%;
+        height: 40px;
+        
+        
+    }
+    &.discount{
+        background: $clr-primary;
+        color: $clr-light;
+        border-radius: 30px;
+        width: 31%;
+        height: 40px;
+    }
 
     &:hover {
         scale: 1.1;

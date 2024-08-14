@@ -1,10 +1,11 @@
 .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     background: $clr-light;
     z-index: 99;
     &_wrapper {
         @include centerAll();
+        position: relative;
     }
     .branding {
         h3 {
@@ -84,6 +85,7 @@
             position: unset;
             height: fit-content;
             background: $clr-light;
+            transition: 0;
             ul {
                 padding-top: 0;
                 flex-direction: row;
@@ -91,6 +93,89 @@
                 li {
                     a {
                         color: $clr-dark;
+                        transition: 0.25s ease;
+                    }
+                }
+            }
+            &.sticky {
+                transition: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        }
+        .home_content { 
+            background-color: $clr-light;
+            width: 110%;
+            top: 13.5rem;
+            opacity: 0;
+            display: none;
+            transition: opacity 0.25s ease;
+            position: absolute;
+            padding: 3rem;
+            box-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.3);
+
+            &.sticky {
+                position: fixed;
+                top: 2.8rem;
+            }
+            &.visible {
+                opacity: 1;
+                display: unset;
+            }
+            .menu_section{
+                margin-bottom: 30px;
+                @include gridEven(3, 4rem);
+                img{
+                    width: 100%;
+                }
+            }
+            .offer_section{
+                @include gridEven(2, 4rem);
+                .special_offer{
+                    background-color:$clr-primary;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: 1rem;
+                    &_text{
+                        color: $clr-light;
+                    }
+                    a{     
+                    font-size: 15px;
+                } 
+                h1{
+                    font-size:35px;
+                    font-weight: 400;
+                }
+                h2{
+                    font-size: 45px;
+                }
+                }
+                .discount_offer_text {
+                    margin-right: 50px;
+                }
+                .discount_offer{
+                    background:$clr-dark;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: 1rem;
+                    
+                    &_text {
+                        color: $clr-light;
+                    }
+                    a{     
+                        font-size: 15px;
+                        
+                    } 
+                    h1{
+                        font-size:45px;
+    
+                    }
+                    h2{
+                        font-size: 35px;
+                        font-weight: 400;
                     }
                 }
             }
