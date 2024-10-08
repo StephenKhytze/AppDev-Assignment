@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
 const homeBtn = document.querySelector('.home_btn');
 homeBtn.addEventListener('click', () => {
     if (homeContent.classList.contains('visible')) {
-        homeContent.style.display = 'unset';
-        setTimeout(() => {
-            homeContent.style.opacity = '1';
-        }, 10);
-    } else {
         homeContent.style.opacity = '0';
         setTimeout(() => {
             homeContent.style.display = 'none';
         }, 250);
+    } else {
+        homeContent.style.display = 'unset';
+        setTimeout(() => {
+            homeContent.style.opacity = '1';
+        }, 10);
     }
     homeContent.classList.toggle('visible');
 });

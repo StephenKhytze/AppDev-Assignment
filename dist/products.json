@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Cheeseburger",
+        "price": 200,
+        "image": "img/cheeseburger_01-300x300.png",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, provident."
+    },
+    {
+        "id": 2,
+        "name": "Whopper",
+        "price": 250,
+        "image": "img/Bbq-burger_01-300x300.png ",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, provident."
+    },
+    {
+        "id": 3,
+        "name": "BigMac",
+        "price": 300,
+        "image": "img/burger-Retro_01-300x300.png",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, provident."
+    }
+]

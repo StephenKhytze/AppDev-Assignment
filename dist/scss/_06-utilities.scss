@@ -40,3 +40,12 @@
         scale: 1.1;
     }
 }
+
+@for $i from 0 through 20 {
+    .mt--#{$i}{
+        margin-top: $i + rem;    
+    }
+    .pt--#{$i}{
+        padding-top: $i + rem;    
+    }
+}
